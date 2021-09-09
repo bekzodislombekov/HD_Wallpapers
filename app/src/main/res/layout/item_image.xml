@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_color"
+    android:paddingBottom="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/user_image"
+        app:layout_constraintTop_toTopOf="@id/user_image" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_bar"
+        style="@style/Widget.MaterialComponents.CircularProgressIndicator.ExtraSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@id/user_image" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <ImageView
+        android:id="@+id/comment"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_comment"
+        app:layout_constraintStart_toEndOf="@id/heart"
+        app:layout_constraintTop_toTopOf="@id/heart" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_send"
+        app:layout_constraintStart_toEndOf="@id/comment"
+        app:layout_constraintTop_toTopOf="@id/heart" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/likes_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/heart"
+        app:layout_constraintTop_toBottomOf="@id/heart" />
+
+    <ImageView
+        android:id="@+id/conversation"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_conversation"
+        app:layout_constraintStart_toStartOf="@id/likes_count"
+        app:layout_constraintTop_toBottomOf="@id/likes_count" />
+
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/conversation"
+        app:layout_constraintStart_toEndOf="@id/conversation"
+        app:layout_constraintTop_toTopOf="@id/conversation" />
+
+    <ImageView
+        android:id="@+id/views"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_eye"
+        app:layout_constraintStart_toEndOf="@id/comment_count"
+        app:layout_constraintTop_toBottomOf="@id/likes_count" />
+
+    <TextView
+        android:id="@+id/views_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/views"
+        app:layout_constraintStart_toEndOf="@id/views"
+        app:layout_constraintTop_toTopOf="@id/views" />
+
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_download"
+        app:layout_constraintStart_toEndOf="@id/views_count"
+        app:layout_constraintTop_toBottomOf="@id/likes_count" />
+
+    <TextView
+        android:id="@+id/download_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/download"
+        app:layout_constraintStart_toEndOf="@id/download"
+        app:layout_constraintTop_toTopOf="@id/download" />
+</androidx.constraintlayout.widget.ConstraintLayout>
